@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rising Sun — a modern Indian business group building trusted products, brands and ventures.">
+  <meta name="theme-color" content="#757575">
+  <title>Rising Sun | Building Brands for Tomorrow</title>
+  <link rel="icon" href="assets/rising-sun-emblem.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Rising Sun home">
+        <img src="assets/rising-sun-emblem.jpg" alt="Rising Sun emblem">
+        <span>RISING SUN</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#business">Business</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">RISING SUN</p>
+          <h1>Building brands.<br><span>Creating possibilities.</span></h1>
+          <p class="lead">
+            A modern business group focused on building meaningful products,
+            developing brands and creating long-term value.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#business">Explore our business</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-logo-card">
+          <img src="assets/rising-sun-logo.jpg" alt="Rising Sun logo">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-light">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow dark">ABOUT US</p>
+          <h2>A foundation for <span>growing ideas.</span></h2>
+        </div>
+        <div class="section-copy">
+          <p>
+            Rising Sun is built around a simple idea: strong businesses start
+            with useful products, clear brands and a commitment to customers.
+          </p>
+          <p>
+            We aim to develop and operate businesses with a practical,
+            long-term approach — from product selection and sourcing to brand
+            building and customer experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="business" class="section section-dark">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">OUR BUSINESS</p>
+          <h2>Multiple opportunities.<br><span>One rising vision.</span></h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-number">01</div>
+            <h3>Consumer Products</h3>
+            <p>Building and bringing useful consumer products to customers through thoughtful sourcing and brand development.</p>
+          </article>
+          <article class="card">
+            <div class="card-number">02</div>
+            <h3>Retail & Distribution</h3>
+            <p>Creating efficient routes from products and brands to modern retail and digital commerce channels.</p>
+          </article>
+          <article class="card">
+            <div class="card-number">03</div>
+            <h3>New Ventures</h3>
+            <p>Exploring new categories and opportunities with a disciplined, customer-first approach.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach" class="section section-light">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow dark">OUR APPROACH</p>
+          <h2>Simple principles.<br><span>Long-term thinking.</span></h2>
+        </div>
+        <div class="principles">
+          <div><span>01</span><strong>Customer first</strong><p>Start with what people genuinely need and value.</p></div>
+          <div><span>02</span><strong>Build with purpose</strong><p>Make every product, brand and decision intentional.</p></div>
+          <div><span>03</span><strong>Grow responsibly</strong><p>Focus on sustainable relationships and durable value.</p></div>
+          <div><span>04</span><strong>Keep evolving</strong><p>Stay open to new categories, channels and ideas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container contact-box">
+        <div>
+          <p class="eyebrow">LET'S CONNECT</p>
+          <h2>Have an idea or<br>business opportunity?</h2>
+        </div>
+        <a class="btn btn-yellow" href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div class="footer-brand">
+        <img src="assets/rising-sun-emblem.jpg" alt="">
+        <span>RISING SUN</span>
+      </div>
+      <p>© <span id="year"></span> Rising Sun. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
